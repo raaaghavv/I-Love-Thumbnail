@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
+/* Define theme tokens */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: 255 255 255; /* light background */
+  --foreground: 23 23 23; /* neutral dark text */
+  --border: 229 229 229; /* light border */
+  --accent: 239 68 68; /* red-500 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 23 23 23; /* dark neutral */
+    --foreground: 229 229 229; /* light text */
+    --border: 38 38 38; /* darker neutral */
+    --accent: 220 38 38; /* red-600, slightly muted */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Map tokens into Tailwind's theme */
+@theme inline {
+  --color-background: rgb(var(--background) / <alpha-value>);
+  --color-foreground: rgb(var(--foreground) / <alpha-value>);
+  --color-border: rgb(var(--border) / <alpha-value>);
+  --color-accent: rgb(var(--accent) / <alpha-value>);
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Accent usage */
+  .link {
+    @apply text-foreground hover:text-accent transition-colors;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg border border-border bg-background text-foreground 
+           hover:border-accent hover:text-accent transition-colors;
+  }
+
+  .card {
+    @apply p-4 rounded-2xl border border-border bg-background;
+  }
+
+  /* Optional extras */
+  .gradient-text {
+    @apply bg-gradient-to-r from-red-300 via-red-400 to-red-300 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-background/70 backdrop-blur-md border border-border;
+  }
+}
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .scrollbar-thumb-rounded {
+    scrollbar-color: var(--color-border) transparent;
+  }
+  .scrollbar-thumb-rounded::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thumb-rounded::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
 }
