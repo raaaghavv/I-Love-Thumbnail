@@ -2,6 +2,8 @@
 
 ThumbPic is a powerful AI-powered thumbnail generator that helps content creators design eye-catching YouTube thumbnails using Google's latest Gemini model for image generation.
 
+## [LIVE](https://thumbpic.vercel.app/)
+
 ## 🌟 Features
 
 - **AI-Powered Generation**: Utilizes Google's Gemini model for high-quality image generation
