@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ThumbPic - AI-Powered Thumbnail Generator
 
-## Getting Started
+ThumbPic is a powerful AI-powered thumbnail generator that helps content creators design eye-catching YouTube thumbnails using Google's latest Gemini model for image generation.
 
-First, run the development server:
+## 🌟 Features
+
+- **AI-Powered Generation**: Utilizes Google's Gemini model for high-quality image generation
+- **Smart Prompt Enhancement**: Automatically enhances your descriptions for better results
+- **Multiple Orientations**: Generate both landscape and portrait thumbnails
+- **Reference Images**: Upload reference images to guide the AI's style
+- **Photo Placement Control**: Choose where to position your photo in the thumbnail
+- **Real-time Preview**: See your generated thumbnails instantly
+- **Mobile Responsive**: Full support for mobile devices
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- Google Cloud API Key with Gemini API access
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/raaaghavv/I-Love-Thumbnail.git
+cd I-Love-Thumbnail
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables:
+
+```bash
+GEMINI_API_KEY=your_api_key_here
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js 15, React, TailwindCSS
+- **AI Model**: Google Gemini
+- **Image Processing**: Canvas API
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide Icons
+- **State Management**: React Hooks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📖 Usage
 
-## Learn More
+1. Upload your photo
+2. Add a reference image (optional)
+3. Describe your thumbnail
+4. Select video type, style, and mood
+5. Choose photo placement
+6. Generate thumbnails
+7. Download or share your favorites
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app supports various customization options:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Video Types: Tutorial, Vlog, Review, etc.
+- Styles: Minimal, Bold, Creative, etc.
+- Moods: Professional, Energetic, Calm, etc.
+- Photo Placements: Left, Center, Right
+- Aspect Ratios: Landscape, Portrait
 
-## Deploy on Vercel
+## ⚖️ Credits System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Free tier: 5 generations per account
+- Upgrade for unlimited generations
+- Each generation creates multiple variations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Content Guidelines
+
+ThumbPic enforces strict content guidelines:
+
+- No copyrighted material
+- No explicit content
+- No hate speech or discrimination
+- No trademarked logos or brands
+
+Built with ❤️ for content creators worldwide
